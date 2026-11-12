@@ -3,14 +3,16 @@ public class Assignment01Q02 {
         double actualPi = Math.PI;
         double approxPi = 0;
 
-        /////////////////////////////////////////////
-        // TODO: Fill in the Pi approxiamtion here
-        /////////////////////////////////////////////
-        /// ...
-        
-        
-        /////////////////////////////////////////////
-        
+        int termCount = Integer.parseInt(args[0]); // Amount of terms in summation
+
+        // Calculate (PI / 4) sum
+        for (int i = 0; i < termCount; i++) {
+            double term = Math.pow(-1, i) / (2 * i + 1);
+            approxPi += term;
+        }
+
+        approxPi *= 4; // Don't forget to multiply by 4 :)
+
         System.out.println(approxPi + " " + actualPi);
     }
 }
